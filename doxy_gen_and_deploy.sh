@@ -108,7 +108,7 @@ cd $TRAVIS_BUILD_DIR
 ${TRAVIS_BUILD_DIR}/doxygen $DOXYFILE 2>&1 | tee foo.txt > >(while read line; do echo -e "\e[01;31m$line\e[0m" >&2; done)
 
 # if any warnings, bail!
-#if [ -s foo.txt ]; then exit 1 ; fi
+if [ -s foo.txt ]; then exit 1 ; fi
 
 rm foo.txt
 
