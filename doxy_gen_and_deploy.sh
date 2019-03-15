@@ -38,7 +38,7 @@ echo 'Setting up the script...'
 # Exit with nonzero exit code if anything fails
 set -e
 
-if [ $BUILDDOXYGEN != "true" ]; then exit 0 ; fi
+if [ "$BUILDDOXYGEN" != "true" ]; then exit 0 ; fi
 cd $TRAVIS_BUILD_DIR
 
 # The default version of doxygen is too old so we'll use a modern version
